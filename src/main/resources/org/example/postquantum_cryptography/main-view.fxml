@@ -8,28 +8,42 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0"
-            prefWidth="820.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.example.postquantum_cryptography.controller.MainController">
-   <Label layoutX="255.0" layoutY="22.0" text="Пост-квантова криптографія">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.postquantum_cryptography.controller.MainController">
+   <Label layoutX="223.0" layoutY="14.0" text="Пост-квантова криптографія">
       <font>
-         <Font name="Times New Roman" size="24.0"/>
+         <Font name="Times New Roman Bold" size="28.0" />
       </font>
    </Label>
-   <MFXButton layoutX="359.0" layoutY="297.0" onMouseClicked="#encryptMessage" text="Шифрувати">
+   <MFXButton layoutX="367.0" layoutY="284.0" onMouseClicked="#encryptMessage" text="Шифрувати">
       <cursor>
-         <Cursor fx:constant="HAND"/>
+         <Cursor fx:constant="HAND" />
       </cursor>
    </MFXButton>
-   <MFXTextField fx:id="message" alignment="CENTER" floatMode="BORDER" layoutX="275.0" layoutY="161.0" prefHeight="7.0"
-                 prefWidth="253.0" promptText="Текст для шифрування">
+   <MFXTextField fx:id="message" alignment="CENTER" floatMode="BORDER" layoutX="299.0" layoutY="183.0" prefHeight="7.0" prefWidth="222.0" promptText="Текст для шифрування">
       <font>
-         <Font name="Times New Roman" size="18.0"/>
+         <Font name="Times New Roman" size="18.0" />
       </font>
    </MFXTextField>
    <MFXNotificationCenter layoutX="14.0" layoutY="14.0">
       <cursor>
-         <Cursor fx:constant="HAND"/>
+         <Cursor fx:constant="HAND" />
       </cursor>
    </MFXNotificationCenter>
+   <MFXTextField fx:id="copyText" alignment="TOP_CENTER" layoutX="521.0" layoutY="283.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="203.0" promptText="Ваш зашифрований текст">
+      <font>
+         <Font name="Times New Roman" size="12.0" />
+      </font></MFXTextField>
+   <Label layoutX="259.0" layoutY="99.0" text="Алгоритм цифрового підпису ">
+      <font>
+         <Font name="Times New Roman" size="18.0" />
+      </font>
+   </Label>
+   <Label fx:id="Dilithium" layoutX="492.0" layoutY="99.0" text="Dilithium">
+      <font>
+         <Font name="Times New Roman" size="18.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Label>
 </AnchorPane>

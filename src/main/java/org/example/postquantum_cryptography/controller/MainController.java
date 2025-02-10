@@ -1,7 +1,10 @@
 package org.example.postquantum_cryptography.controller;
 
+
 import io.github.palexdev.materialfx.controls.MFXTextField;
+import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import org.bouncycastle.pqc.crypto.crystals.dilithium.*;
 import org.bouncycastle.util.encoders.Hex;
 
@@ -11,8 +14,18 @@ public class MainController {
 
     public MFXTextField message;
 
+    public MFXTextField copyText;
+
+    @FXML
+    private AnchorPane mainPane;
+
     private DilithiumPublicKeyParameters publicKey;
     private DilithiumPrivateKeyParameters privateKey;
+
+    @FXML
+    public void initialize() {
+        mainPane.setOnMouseClicked(event -> mainPane.requestFocus());
+    }
 
     // Генерація ключів під час ініціалізації
     public MainController() {
@@ -55,9 +68,8 @@ public class MainController {
             DilithiumSigner signer = new DilithiumSigner();
             signer.init(true, privateKey);
             byte[] signature = signer.generateSignature(plaintext.getBytes());
-
             System.out.println("Підпис повідомлення: " + Hex.toHexString(signature));
-
+            copyText.setText(Hex.toHexString(signature));
             // Перевірка підпису (опціонально)
             verifySignature(plaintext.getBytes(), signature);
         } catch (Exception e) {
