@@ -1,4 +1,4 @@
-package org.example.postquantum_cryptography;
+package org.example.postquantum_cryptography.algoritm;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 

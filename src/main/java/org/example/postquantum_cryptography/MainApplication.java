@@ -13,6 +13,7 @@ public class MainApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 820, 620);
         stage.setScene(scene);
+        stage.setTitle("Post-Quantum Cryptography");
         stage.show();
     }
 

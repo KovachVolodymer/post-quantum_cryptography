@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.postquantum_cryptography.controller.MainController">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="820.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.postquantum_cryptography.controller.MainController">
    <Label layoutX="223.0" layoutY="14.0" text="Пост-квантова криптографія">
       <font>
          <Font name="Times New Roman Bold" size="28.0" />
@@ -38,7 +38,7 @@
          <Font name="Times New Roman" size="18.0" />
       </font>
    </Label>
-   <Label fx:id="Dilithium" layoutX="492.0" layoutY="99.0" text="Dilithium">
+   <Label layoutX="492.0" layoutY="99.0" onMouseClicked="#dilithium" styleClass="label1" text="Dilithium">
       <font>
          <Font name="Times New Roman" size="18.0" />
       </font>

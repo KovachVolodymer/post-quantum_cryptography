@@ -3,12 +3,19 @@ package org.example.postquantum_cryptography.controller;
 
 import io.github.palexdev.materialfx.controls.MFXTextField;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import org.bouncycastle.pqc.crypto.crystals.dilithium.*;
 import org.bouncycastle.util.encoders.Hex;
 
+import java.io.IOException;
+import java.net.URL;
 import java.security.SecureRandom;
+import java.util.Objects;
 
 public class MainController {
 
@@ -18,6 +25,8 @@ public class MainController {
 
     @FXML
     private AnchorPane mainPane;
+
+    Stage stage = new Stage();
 
     private DilithiumPublicKeyParameters publicKey;
     private DilithiumPrivateKeyParameters privateKey;
@@ -94,4 +103,32 @@ public class MainController {
             e.printStackTrace();
         }
     }
+
+    public void dilithium(MouseEvent mouseEvent) throws IOException {
+        openNewScene(stage, "dilithium-info.fxml");
+    }
+
+
+    public void openNewScene(Stage stage, String nameScene) throws IOException {
+        URL resource = getClass().getResource("/org/example/postquantum_cryptography/" + nameScene);
+        Objects.requireNonNull(resource, "FXML файл не знайдено! " + nameScene);
+
+        Parent root = FXMLLoader.load(resource);
+        Scene scene = new Scene(root);
+
+        if (stage == null) {
+            stage = new Stage();
+        }
+
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+
+        // Закриття поточного вікна (переконайтеся, що mainPane ініціалізований)
+        if (mainPane != null) {
+            Stage currentStage = (Stage) mainPane.getScene().getWindow();
+            currentStage.close();
+        }
+    }
+
 }
