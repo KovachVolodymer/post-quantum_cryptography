@@ -5,7 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 import java.io.IOException;
+
 
 public class MainApplication extends Application {
     @Override
@@ -13,6 +15,7 @@ public class MainApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 820, 620);
         stage.setScene(scene);
+        stage.setTitle("Post-Quantum Cryptography");
         stage.show();
     }
 
