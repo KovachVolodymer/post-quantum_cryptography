@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.mfxcore.controls.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.postquantum_cryptography.controller.DilithiumInfoController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="620.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.postquantum_cryptography.controller.DilithiumInfoController">
+   <children>
+      <MFXButton fx:id="backButton" layoutX="14.0" layoutY="580.0" text="Назад" />
+      <Label layoutX="150.0" layoutY="14.0" text="Алгоритм Dilithium: Постквантовий цифровий підпис">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Text layoutX="14.0" layoutY="87.0" text="Dilithium — це криптографічний алгоритм цифрового підпису, який належить до постквантової криптографії. Він базується на складності математичних задач, пов'язаних з решітками (lattices), що робить його стійким до атак навіть з боку квантових комп’ютерів." wrappingWidth="638.1034698486328">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="211.0" text="Dilithium був розроблений в рамках конкурсу NIST (Національного інституту стандартів і технологій США) з вибору стандартів постквантової криптографії. У 2022 році Dilithium став частиною стандарту постквантової криптографії." wrappingWidth="638.1034698486327">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dilithium забезпечує криптографічний цифровий підпис, який:&#10;&#10;Гарантує цілісність даних (неможливо змінити повідомлення без того, щоб це не було виявлено).&#10;Перевіряє автентичність повідомлення (можна переконатися, що підпис був створений конкретним користувачем).&#10;Стійкий до квантових атак, оскільки заснований на складності задач з решітками." wrappingWidth="638.1034698486327">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Text>
+   </children>
 </AnchorPane>
