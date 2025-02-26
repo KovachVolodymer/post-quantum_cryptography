@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import javafx.scene.input.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
@@ -60,4 +61,43 @@ public class SceneUtil {
             e.printStackTrace();
         }
     }
+
+    public static void changeContent(AnchorPane pane, String fxmlFile) {
+        try {
+            FXMLLoader loader = new FXMLLoader(SceneUtil.class.getResource("/org/example/postquantum_cryptography/" + fxmlFile));
+            AnchorPane newPane = loader.load();
+            pane.getChildren().setAll(newPane.getChildren());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void changeSceneToMain(MouseEvent event, String fxmlFile) {
+        try {
+            FXMLLoader loader = new FXMLLoader(SceneUtil.class.getResource("/org/example/postquantum_cryptography/" + fxmlFile));
+            Parent root = loader.load();
+
+            // Отримуємо поточний Stage
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+
+            // Збереження розміру вікна
+            double width = stage.getWidth();
+            double height = stage.getHeight();
+
+            // Встановлення нової сцени
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+
+            // Відновлення розміру
+            stage.setWidth(width);
+            stage.setHeight(height);
+
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
 }

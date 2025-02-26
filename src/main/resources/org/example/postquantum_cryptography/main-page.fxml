@@ -4,7 +4,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="620.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.postquantum_cryptography.controller.MainPageController">
+<AnchorPane fx:id="mainPane" xmlns="http://javafx.com/javafx/21.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.postquantum_cryptography.controller.MainPageController">
    <children>
       <MFXButton layoutX="230.0" layoutY="297.0" onMouseClicked="#DilithiumAlgoritm" text="Dilithium" />
       <MFXButton layoutX="465.0" layoutY="297.0" onMouseClicked="#mlkm512Algoritm" text="ML-KM512" />

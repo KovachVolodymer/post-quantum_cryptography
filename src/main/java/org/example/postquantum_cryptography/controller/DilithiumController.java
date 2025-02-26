@@ -66,4 +66,10 @@ public class DilithiumController {
     public void dilithium(MouseEvent mouseEvent) throws IOException {
         SceneUtil.openNewScene(stage, "dilithium-info.fxml", mainPane);
     }
+
+    public void backButton(MouseEvent mouseEvent) {
+        SceneUtil.changeSceneToMain(mouseEvent, "main-page.fxml");
+    }
+
+
 }
