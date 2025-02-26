@@ -3,7 +3,9 @@ package org.example.postquantum_cryptography.controller;
 import io.github.palexdev.materialfx.controls.MFXTextField;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import org.example.postquantum_cryptography.algoritm.PostQuantumEncryptionUtil;
+import org.example.postquantum_cryptography.util.SceneUtil;
 
 import javax.crypto.SecretKey;
 import java.security.NoSuchAlgorithmException;
@@ -11,6 +13,7 @@ import java.security.NoSuchProviderException;
 
 public class MlKem512AlgorithmController {
 
+    public AnchorPane mainPane;
     @FXML
     private MFXTextField message;
 
@@ -50,4 +53,11 @@ public class MlKem512AlgorithmController {
 
     public void Ml512Algorithm(MouseEvent mouseEvent) {
     }
+
+    public void backButton(MouseEvent mouseEvent) {
+        SceneUtil.changeSceneToMain(mouseEvent, "main-page.fxml");
+    }
+
+
+
 }
