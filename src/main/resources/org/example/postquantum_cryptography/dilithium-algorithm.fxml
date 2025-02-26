@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
-<?import io.github.palexdev.materialfx.controls.MFXNotificationCenter?>
 <?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="820.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.postquantum_cryptography.controller.MainController">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="820.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.postquantum_cryptography.controller.DilithiumController">
    <Label layoutX="223.0" layoutY="14.0" text="Пост-квантова криптографія">
       <font>
          <Font name="Times New Roman Bold" size="28.0" />
@@ -24,12 +23,7 @@
          <Font name="Times New Roman" size="18.0" />
       </font>
    </MFXTextField>
-   <MFXNotificationCenter layoutX="14.0" layoutY="14.0">
-      <cursor>
-         <Cursor fx:constant="HAND" />
-      </cursor>
-   </MFXNotificationCenter>
-   <MFXTextField fx:id="copyText" alignment="TOP_CENTER" layoutX="521.0" layoutY="283.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="203.0" promptText="Ваш зашифрований текст">
+   <MFXTextField fx:id="copyText" alignment="TOP_CENTER" layoutX="55.0" layoutY="310.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="203.0" promptText="Ваш зашифрований текст">
       <font>
          <Font name="Times New Roman" size="12.0" />
       </font></MFXTextField>
@@ -46,4 +40,9 @@
          <Cursor fx:constant="HAND" />
       </cursor>
    </Label>
+   <MFXTextField fx:id="copyText1" alignment="TOP_CENTER" layoutX="563.0" layoutY="310.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="203.0" promptText="Ваш зашифрований текст">
+      <font>
+         <Font name="Times New Roman" size="12.0" />
+      </font>
+   </MFXTextField>
 </AnchorPane>
